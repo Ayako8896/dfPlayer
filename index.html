@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Track Number</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        background-color: #f0f8ff;
+        padding: 2em;
+      }
+      input[type="number"], input[type="submit"] {
+        padding: 0.6em;
+        font-size: 1em;
+        margin: 0.5em;
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Set DFPlayer Track</h2>
+    <form action="https://api.thingspeak.com/update" method="get" target="_blank">
+      <input type="hidden" name="api_key" value="Y9UZSEKQI52AY8TO">
+      <label for="track">Track Number (1–1200):</label><br>
+      <input type="number" id="track" name="field1" min="1" max="255" required><br>
+      <input type="submit" value="Send to ESP32">
+    </form>
+  </body>
+</html>
